@@ -1,97 +1,136 @@
-#[Material-UI](http://callemall.github.io/material-ui/) [![Build Status](https://travis-ci.org/callemall/material-ui.svg?branch=master)](https://travis-ci.org/callemall/material-ui) [![npm version](https://badge.fury.io/js/material-ui.svg)](http://badge.fury.io/js/material-ui)
+<p align="center">
+  <a href="https://material-ui.com/" rel="noopener" target="_blank"><img width="150" src="https://material-ui.com/static/logo.svg" alt="Material-UI logo"></a></p>
+</p>
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/callemall/material-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Pair on this](https://tf-assets-staging.s3.amazonaws.com/badges/thinkful_repo_badge.svg)](http://start.thinkful.com/react/?utm_source=github&utm_medium=badge&utm_campaign=material-ui)
+<h1 align="center">Material-UI</h1>
 
-Material-UI is a set of [React](http://facebook.github.io/react/) components that implement [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html) specification.
+<div align="center">
 
-Check out our [documentation site](http://www.material-ui.com/) for live examples. It's still a work in progress, but hopefully you can see where we're headed.
+[React](https://reactjs.org/) components for faster and easier web development. Build your own design system, or start with [Material Design](https://material.io/design/introduction/).
 
-## Prerequisites
+[![npm package](https://img.shields.io/npm/v/@material-ui/core/latest.svg)](https://www.npmjs.com/package/@material-ui/core)
+[![npm downloads](https://img.shields.io/npm/dm/@material-ui/core.svg)](https://www.npmjs.com/package/@material-ui/core)
+[![CircleCI](https://img.shields.io/circleci/project/github/mui-org/material-ui/master.svg)](https://circleci.com/gh/mui-org/material-ui/tree/master)
+[![Build Status](https://dev.azure.com/mui-org/Material-UI/_apis/build/status/mui-org.material-ui?branchName=master)](https://dev.azure.com/mui-org/Material-UI/_build/latest?definitionId=1&branchName=master)
+[![Coverage Status](https://img.shields.io/codecov/c/github/mui-org/material-ui/master.svg)](https://codecov.io/gh/mui-org/material-ui/branch/master)
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1320/badge)](https://bestpractices.coreinfrastructure.org/projects/1320)
+![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/MaterialUI.svg?label=follow+Material-UI)](https://twitter.com/MaterialUI)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=mui-org/material-ui)](https://dependabot.com)
+[![PeerDependencies](https://david-dm.org/mui-org/material-ui/master/peer-status.svg?path=packages/material-ui)](https://david-dm.org/mui-org/material-ui/master?type=peer&path=packages/material-ui)
+[![Dependencies](https://david-dm.org/mui-org/material-ui/master/status.svg?path=packages/material-ui)](https://david-dm.org/mui-org/material-ui/master?path=packages/material-ui)
+[![DevDependencies](https://david-dm.org/mui-org/material-ui/master/dev-status.svg?path=packages/material-ui)](https://david-dm.org/mui-org/material-ui/master?type=dev)
+[![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/mui-org/material-ui.svg)](https://isitmaintained.com/project/mui-org/material-ui "Average time to resolve an issue")
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/material-ui-docs/localized.svg?cache=v1)](https://translate.material-ui.com/project/material-ui-docs)
 
-We recommend that you get started with the [React Library](http://facebook.github.io/react/) before diving into material-ui for a better understanding. Should you choose to skip this, don't worry, we'll explain relevant React concepts as they come along.
+</div>
 
 ## Installation
 
-Material-UI is available as an [npm package](https://www.npmjs.org/package/material-ui).
+Material-UI is available as an [npm package](https://www.npmjs.com/package/@material-ui/core).
+
+**[Stable channel v4](https://material-ui.com/)**
 ```sh
-npm install material-ui
-```
-After npm install, you'll find all the .jsx files in the /src folder and their compiled versions in the /lib folder.
+// with npm
+npm install @material-ui/core
 
-### React-Tap-Event-Plugin
-Some components use [react-tap-event-plugin](https://github.com/zilverline/react-tap-event-plugin) to
-listen for touch events. This dependency is temporary and will go away once react v1.0 is released. Until then, be
-sure to inject this plugin at the start of your app.
-```js
-var injectTapEventPlugin = require("react-tap-event-plugin");
-
-//Needed for onTouchTap
-//Can go away when react 1.0 release
-//Check this repo:
-//https://github.com/zilverline/react-tap-event-plugin
-injectTapEventPlugin();
+// with yarn
+yarn add @material-ui/core
 ```
 
-### Roboto Font
-Be sure to include the [Roboto](http://www.google.com/fonts/specimen/Roboto) font in your project.
-Here are [some instructions](http://www.google.com/fonts#UsePlace:use/Collection:Roboto:400,300,500) on how to include it in your project.
+**[v3.x](https://v3.material-ui.com/)** ([Migration from v3 to v4](https://material-ui.com/guides/migration-v3/))
+
+**[v0.x](https://v0.material-ui.com/)** ([Migration to v1](https://material-ui.com/guides/migration-v0x/))
+
+Please note that `@next` will only point to pre-releases; to get the latest stable release use `@latest` instead.
+
+## Who sponsors Material-UI?
+
+### Diamond 💎
+
+Diamond Sponsors are those who have pledged $1,500/month or more to Material-UI.
+
+### Gold 🏆
+
+via [Patreon](https://www.patreon.com/oliviertassinari)
+
+<p style="display: flex; justify-content: center;">
+  <a data-ga-event-category="sponsor" data-ga-event-action="logo" data-ga-event-label="tidelift" href="https://tidelift.com/subscription/pkg/npm-material-ui?utm_source=npm-material-ui&utm_medium=referral&utm_campaign=homepage" rel="noopener sponsored" target="_blank" style="margin-right: 16px;"><img width="96" src="https://github.com/tidelift.png?size=96" alt="tidelift" title="Enterprise-ready open source software" /></a>
+  <a data-ga-event-category="sponsor" data-ga-event-action="logo" data-ga-event-label="bitsrc" href="https://bit.dev" rel="noopener sponsored" target="_blank" style="margin-right: 16px;"><img width="96" src="https://github.com/teambit.png?size=96" alt="bitsrc" title="The fastest way to share code" /></a>
+</p>
+
+via [OpenCollective](https://opencollective.com/material-ui)
+
+<p style="display: flex; justify-content: center; flex-wrap: wrap;">
+  <a data-ga-event-category="sponsor" data-ga-event-action="logo" data-ga-event-label="callemall" href="https://www.call-em-all.com" rel="noopener sponsored" target="_blank" style="margin-right: 16px;"><img src="https://images.opencollective.com/proxy/images?src=https%3A%2F%2Fopencollective-production.s3-us-west-1.amazonaws.com%2Ff4053300-e0ea-11e7-acf0-0fa7c0509f4e.png&height=100" alt="call-em-all" title="The easy way to message your group" width="100" loading="lazy"></a>
+</p>
+
+Gold Sponsors are those who have pledged $500/month or more to Material-UI.
+
+### There is more!
+
+See the full list of [our backers](https://material-ui.com/discover-more/backers/).
 
 ## Usage
 
-Once material-ui is included in your project, you can use the components this way:
-```js
-/** MyAwesomeReactComponent.jsx */
+Here is a quick example to get you started, **it's all you need**:
 
-var React = require('react'),
-  mui = require('material-ui'),
-  ThemeManager = new mui.Styles.ThemeManager(),
-  RaisedButton = mui.RaisedButton;
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Button from '@material-ui/core/Button';
 
-var SomeAwesomeComponent = React.createClass({
+function App() {
+  return (
+    <Button variant="contained" color="primary">
+      Hello World
+    </Button>
+  );
+}
 
-  childContextTypes: {
-    muiTheme: React.PropTypes.object
-  },
-
-  getChildContext: function() {
-    return {
-      muiTheme: ThemeManager.getCurrentTheme()
-    };
-  },
-
-  render: function() {
-    return (
-        <RaisedButton label="Default" />
-    );
-  }
-
-});
-
-module.exports = MyAwesomeReactComponent;
-
+ReactDOM.render(<App />, document.querySelector('#app'));
 ```
 
-### Theme
+Yes, it's really all you need to get started as you can see in this live and interactive demo:
 
-**Please note that since v0.8.0, you also need to define a theme for components to start working.** For instructions on implementing and using themes, visit our [documentation](http://material-ui.com/#/customization/themes).
+[![Edit Button](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/4j7m47vlm4)
 
-## Customization
+## Questions
 
-Material-UI components have their styles defined inline. There are two approaches to overriding these styles:
-
-* Override individual component styles via the `style` prop
-* Define a Theme to apply overarching style changes
-
-This allows you to override variables used by components without having to modify material-ui source files directly.
+For *how-to* questions and other non-issues,
+please use [StackOverflow](https://stackoverflow.com/questions/tagged/material-ui) instead of Github issues.
+There is a StackOverflow tag called "material-ui" that you can use to tag your questions.
 
 ## Examples
-There are 2 projects that you can look at to help you get started. The first project can be found in the [example folder](https://github.com/callemall/material-ui/tree/master/example). This is a basic project that shows how you can consume material-ui components in your own project.
 
-The second project is the actual documentation site. This is a more complex project but will give examples of every component. Check out the [docs folder](https://github.com/callemall/material-ui/tree/master/docs) for build instructions.
+Are you looking for an example project to get started?
+[We host some](https://material-ui.com/getting-started/example-projects/).
 
-## Contribute
+## Documentation
 
-[Material-UI](http://www.material-ui.com/) came about from our love of [React](http://facebook.github.io/react/) and [Google's Material Design](https://www.google.com/design/spec/material-design/introduction.html). We're currently using it on a project at [Call-Em-All](https://www.call-em-all.com/) and plan on adding to it and making it better. If you'd like to help, check out the [docs folder](https://github.com/callemall/material-ui/tree/master/docs). We'd greatly appreciate any contribution you make. :)
+Check out our [documentation website](https://material-ui.com/).
+
+## Premium Themes
+
+You can find complete templates & themes in the [Material-UI store](https://material-ui.com/store/?utm_source=docs&utm_medium=referral&utm_campaign=readme-store) .
+
+## Contributing
+
+Read our [contributing guide](/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to Material-UI.
+
+Notice that contributions go far beyond pull requests and commits.
+Although we love giving you the opportunity to put your stamp on Material-UI, we also are thrilled to receive a variety of [other contributions](https://material-ui.com/getting-started/faq/#material-ui-is-awesome-how-can-i-support-the-project).
+
+## Changelog
+
+Recently Updated?
+Please read the [changelog](https://github.com/mui-org/material-ui/releases).
+
+## Roadmap
+
+The future plans and high priority features and enhancements can be found in the [roadmap](https://material-ui.com/discover-more/roadmap/) file.
 
 ## License
-This project is licensed under the terms of the [MIT license](https://github.com/callemall/material-ui/blob/master/LICENSE)
+
+This project is licensed under the terms of the
+[MIT license](/LICENSE).
